@@ -1,0 +1,42 @@
+.main, .socials {
+  display: flex;
+  flex-direction: row;
+  flex: 0 1 auto;
+  gap: .1rem;
+}
+
+.main {
+}
+
+.socials {
+  .link {
+    padding: 0.6rem;
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+  }
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding: 0 1.2rem;
+
+  cursor: pointer;
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+
+.logo {
+  padding: .6rem;
+}
+
+.logo, .logo img {
+  height: 4rem;
+}

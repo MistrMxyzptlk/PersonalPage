@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  flex: 0 1 20rem;
+}
+
+.main {
+  flex: 1 1 auto;
+}

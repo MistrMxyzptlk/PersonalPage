@@ -1,1 +1,9 @@
-<p>body works!</p>
+<div class="sidebar left-sidebar" *ngIf="sidebarState.left.open">
+
+</div>
+<div class="main">
+  <router-outlet></router-outlet>
+</div>
+<div class="sidebar right-sidebar" *ngIf="sidebarState.right.open">
+
+</div>

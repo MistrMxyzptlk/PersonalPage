@@ -7,6 +7,7 @@ import { BodyComponent } from './body/body.component';
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatRippleModule} from "@angular/material/core";
 import {MatButtonModule} from "@angular/material/button";
+import {RouterModule, RouterOutlet} from "@angular/router";
 
 
 
@@ -25,7 +26,23 @@ import {MatButtonModule} from "@angular/material/button";
     MatToolbarModule,
     MatRippleModule,
     NgOptimizedImage,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'about',
+      },
+      {
+        path: 'about',
+        loadComponent: () => import('../pages/about/about.component').then(c => c.AboutComponent),
+      },
+      {
+        path: '*',
+        pathMatch: 'full',
+        redirectTo: 'not-found',
+      }
+    ])
   ]
 })
 export class LayoutModule { }

@@ -1,0 +1,36 @@
+@import 'material/variables';
+
+:host {
+  display: flex;
+  flex-direction: row;
+
+  border-top: 2px solid $primary-500;
+  padding-top: 1rem;
+  gap: 1rem;
+
+  font-size: 2rem;
+}
+
+.col {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    display: flex;
+    height: 3.2rem;
+    align-items: center;
+  }
+}
+
+.left {
+  align-items: flex-end;
+}
+
+.center {
+  align-items: center;
+}
+
+.right {
+  align-items: flex-start;
+}

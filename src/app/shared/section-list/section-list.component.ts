@@ -6,5 +6,8 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./section-list.component.scss']
 })
 export class SectionListComponent {
-  @Input() type: 'basic' | 'article' = 'basic';
+  @Input() set type(value: 'basic' | 'article') {
+    this.containerClasses = `section-list-container ${value}`;
+  }
+  protected containerClasses: string = 'section-list-container basic';
 }

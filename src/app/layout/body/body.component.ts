@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {SidebarService} from "../../services/sidebar.service";
-import {defaultSidebarState, ISidebarState} from "../../model/layout/sidebar.model";
+import {SidebarService} from '../../services/sidebar.service';
+import {defaultSidebarState, ISidebarState} from '../../model/layout/sidebar.model';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {tap} from "rxjs";
+import {tap} from 'rxjs';
 
 @UntilDestroy()
 @Component({

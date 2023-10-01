@@ -1,8 +1,15 @@
+@use 'vars';
+
+.toolbar {
+  padding: 0 vars.$page-side-offset;
+}
+
 .main, .socials {
   display: flex;
   flex-direction: row;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
   gap: .1rem;
+  align-items: center;
 }
 
 .main {

@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-section-list',
@@ -6,8 +6,4 @@ import {Component, Input} from '@angular/core';
   styleUrls: ['./section-list.component.scss']
 })
 export class SectionListComponent {
-  @Input() set type(value: 'basic' | 'article') {
-    this.containerClasses = `section-list-container ${value}`;
-  }
-  protected containerClasses: string = 'section-list-container basic';
 }

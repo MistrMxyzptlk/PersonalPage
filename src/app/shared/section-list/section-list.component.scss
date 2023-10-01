@@ -1,15 +1,6 @@
-@import 'variables';
+@use 'vars';
 
-.section-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  &.basic {
-    padding: 4rem;
-  }
-
-  &.article {
-    padding: 4rem $side-offset;
-  }
+:host {
+  display: block;
+  padding: 0 vars.$page-side-offset;
 }

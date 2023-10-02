@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
 
+$primary-400: mat.get-color-from-palette(mat.$indigo-palette, 300);
 $primary-500: mat.get-color-from-palette(mat.$indigo-palette, 500);
 

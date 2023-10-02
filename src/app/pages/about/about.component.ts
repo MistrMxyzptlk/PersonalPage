@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-about',
@@ -7,7 +9,9 @@ import {SharedModule} from '../../shared/shared.module';
   styleUrls: ['./about.component.scss'],
   standalone: true,
   imports: [
-    SharedModule
+    SharedModule,
+    MatGridListModule,
+    MatCardModule
   ]
 })
 export class AboutComponent {

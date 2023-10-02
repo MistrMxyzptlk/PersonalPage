@@ -1,5 +1,7 @@
 @use 'vars';
 
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: vars.$article-gap;
 }

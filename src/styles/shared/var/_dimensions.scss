@@ -1,5 +1,5 @@
 :root {
-  --page-top-offset: 4rem;
+  --page-top-offset: 30px;
   --page-width: 700px;
 
   @media screen and (max-width: 700px) {
@@ -8,17 +8,22 @@
 
   @media screen and (min-width: 1200px) {
     --page-width: 75%;
+    --page-top-offset: 40px;
   }
 
   @media screen and (min-width: 1600px) {
     --page-width: 70%;
+    --page-top-offset: 50px;
   }
 
-  @media screen and (min-width: 1900px) {
+  @media screen and (min-width: 1800px) {
     --page-width: 60%;
+    --page-top-offset: 60px;
   }
 }
 
 $page-width: var(--page-width);
 $page-side-offset: var(--page-side-offset);
 $page-top-offset: var(--page-top-offset);
+
+$article-gap: calc(var(--page-top-offset) * 2);

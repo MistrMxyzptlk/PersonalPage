@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 48 48"
+   width="96px"
+   height="96px"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="azure-pink.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="9.0833333"
+     inkscape:cx="43.761468"
+     inkscape:cy="39.137615"
+     inkscape:window-width="1842"
+     inkscape:window-height="1057"
+     inkscape:window-x="70"
+     inkscape:window-y="-4"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#035bda"
+     d="M46 40L29.317 10.852 22.808 23.96 34.267 37.24 13 39.655zM13.092 18.182L2 36.896 11.442 35.947 28.033 5.678z"
+     id="path2"
+     style="fill:#f8bbd0;fill-opacity:1" />
+</svg>

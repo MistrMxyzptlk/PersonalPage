@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {SharedModule} from '../../shared/shared.module';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {IntroductionComponent} from './introduction/introduction.component';
+import {FeaturesComponent} from './features/features.component';
 
 @Component({
   selector: 'app-about',
@@ -15,8 +17,11 @@ import {MatButtonModule} from '@angular/material/button';
         MatGridListModule,
         MatCardModule,
         MatIconModule,
-        MatButtonModule
-    ]
+        MatButtonModule,
+        IntroductionComponent,
+        FeaturesComponent,
+    ],
+
 })
 export class AboutComponent {
 

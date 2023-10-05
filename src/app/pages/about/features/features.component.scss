@@ -1,0 +1,41 @@
+@use 'vars';
+
+:host {
+  display: block;
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    border-radius: 16px;
+    padding: 16px;
+    gap: 16px;
+
+    box-sizing: border-box;
+
+    background: vars.$primary-400;
+    color: white;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    mat-icon {
+      color: #f8bbd0;
+      width: 72px;
+      height: 72px;
+      line-height: 72px;
+      font-size: 72px;
+    }
+
+    .text {
+      text-align: center;
+      height: 100px;
+    }
+
+    .headline {
+
+    }
+  }
+}

@@ -1,5 +1,16 @@
 @use '@angular/material' as mat;
 
+$primary-50:  mat.get-color-from-palette(mat.$indigo-palette,  50);
+$primary-100: mat.get-color-from-palette(mat.$indigo-palette, 100);
+$primary-200: mat.get-color-from-palette(mat.$indigo-palette, 200);
+$primary-300: mat.get-color-from-palette(mat.$indigo-palette, 300);
 $primary-400: mat.get-color-from-palette(mat.$indigo-palette, 400);
 $primary-500: mat.get-color-from-palette(mat.$indigo-palette, 500);
+
+$accent-50:  mat.get-color-from-palette(mat.$pink-palette,  50);
+$accent-100: mat.get-color-from-palette(mat.$pink-palette, 100);
+$accent-200: mat.get-color-from-palette(mat.$pink-palette, 200);
+$accent-300: mat.get-color-from-palette(mat.$pink-palette, 300);
+$accent-400: mat.get-color-from-palette(mat.$pink-palette, 400);
+$accent-500: mat.get-color-from-palette(mat.$pink-palette, 500);
 

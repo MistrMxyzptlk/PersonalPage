@@ -6,6 +6,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {IntroductionComponent} from './introduction/introduction.component';
 import {FeaturesComponent} from './features/features.component';
+import {MilestonesComponent} from './milestones/milestones.component';
 
 @Component({
   selector: 'app-about',
@@ -20,6 +21,7 @@ import {FeaturesComponent} from './features/features.component';
         MatButtonModule,
         IntroductionComponent,
         FeaturesComponent,
+        MilestonesComponent,
     ],
 
 })

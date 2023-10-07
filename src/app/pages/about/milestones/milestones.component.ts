@@ -2,6 +2,7 @@ import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MilestoneComponent} from './milestone/milestone.component';
 import {IInterval} from '../../../shared/model/interval.model';
+import {SharedModule} from '../../../shared/shared.module';
 
 export interface IMilestone {
   icon?: string;
@@ -16,7 +17,7 @@ const lorem_ipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cr
 @Component({
   selector: 'app-milestones',
   standalone: true,
-    imports: [CommonModule, MilestoneComponent],
+    imports: [CommonModule, MilestoneComponent, SharedModule],
   templateUrl: './milestones.component.html',
   styleUrls: ['./milestones.component.scss']
 })
@@ -78,6 +79,7 @@ export class MilestonesComponent {
       important: true,
     },
     {
+      icon: 'local_fire_department',
       headline: 'Počátek mého šílenství',
       date: {
         from: new Date('09-1-2016')
@@ -186,4 +188,8 @@ export class MilestonesComponent {
       important: true,
     },
   ];
+
+  onAppear(component: MilestoneComponent) {
+    component.appeared = 'appeared';
+  }
 }

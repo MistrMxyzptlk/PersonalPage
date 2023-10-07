@@ -19,7 +19,7 @@ export class FormatPipe implements PipeTransform {
       return this.transformDate(value);
     }
     if ('to' in value) {
-      return `${this.transformDate(value.from)} - ${this.transformDate(value.to!)}`;
+      return `${this.transformDate(value.from)} - ${this.transformDate(value.to as Date)}`;
     }
     return `Od ${this.transformDate(value.from)}`;
   }

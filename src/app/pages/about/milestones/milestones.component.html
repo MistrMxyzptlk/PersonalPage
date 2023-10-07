@@ -1,10 +1,11 @@
 <h1 class="mat-headline-2"> Milníky </h1>
 <div class="milestones-container">
-  <app-milestone *ngFor="let milestone of milestones"
+  <app-milestone *ngFor="let milestone of milestones" #c_milestone
                  [icon]="milestone.icon ? milestone.icon : 'done'"
                  [headline]="milestone.headline"
                  [date]="milestone.date"
-                 [class.important]="milestone.important">
+                 [class.important]="milestone.important"
+                 (appAppear)="onAppear(c_milestone)">
     <p *ngIf="milestone.text"> {{ milestone.text }} </p>
   </app-milestone>
 </div>

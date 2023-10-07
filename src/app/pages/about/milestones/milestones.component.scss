@@ -10,9 +10,9 @@
     &::before {
       content: "";
       position: absolute;
-      top: 0;
+      top: 36px;
       left: 34px;
-      height: 100%;
+      height: calc(100% - 72px);
       width: 4px;
       background: vars.$primary-200;
     }

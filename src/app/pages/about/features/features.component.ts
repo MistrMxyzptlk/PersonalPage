@@ -2,8 +2,9 @@ import {Component, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatIconModule} from '@angular/material/icon';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 import {OnAppearDirective} from '../../../shared/directives/on-appear.directive';
+import {slideInBottom, slideInLeft, slideInRight} from '../../../shared/animations/slide-in.animation';
+import {zoomIn} from '../../../shared/animations/zoom-in.animation';
 
 @Component({
   selector: 'app-features',
@@ -16,19 +17,10 @@ import {OnAppearDirective} from '../../../shared/directives/on-appear.directive'
     outputs: ['appAppear: appear']
   }],
   animations: [
-    trigger('slideInBottom', [
-      state('in', style({
-        top: 0,
-        opacity: 1,
-      })),
-      state('out', style({
-        top: '100px',
-        opacity: 0,
-      })),
-      transition('out => in', [
-        animate('.4s ease-out'),
-      ]),
-    ]),
+    slideInBottom(100),
+    slideInRight(100),
+    slideInLeft(100),
+    zoomIn(.8),
   ],
 })
 export class FeaturesComponent {

@@ -190,6 +190,6 @@ export class MilestonesComponent {
   ];
 
   onAppear(component: MilestoneComponent) {
-    component.appeared = 'appeared';
+    component.appeared = 'in';
   }
 }

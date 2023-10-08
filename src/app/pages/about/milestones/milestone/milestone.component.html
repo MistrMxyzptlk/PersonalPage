@@ -1,7 +1,7 @@
-<div class="icon mat-elevation-z3" [@icon-appeared]="appeared">
+<div class="icon mat-elevation-z3" [@zoomIn]="appeared">
   <mat-icon *ngIf="icon" inline> {{ icon }} </mat-icon>
 </div>
-<div class="text mat-elevation-z2" [@text-appeared]="appeared">
+<div class="text mat-elevation-z2" [@slideInRight]="appeared">
   <div class="header">
     <h1> {{ headline }} </h1>
     <h2 *ngIf="date"> {{ date | format }} </h2>

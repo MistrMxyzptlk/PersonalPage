@@ -1,8 +1,8 @@
 import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
-import {animate, state, style, transition, trigger} from '@angular/animations';
 import {SharedModule} from '../../../shared/shared.module';
+import {slideInLeft, slideInRight} from '../../../shared/animations/slide-in.animation';
 
 @Component({
   selector: 'app-introduction',
@@ -14,34 +14,7 @@ import {SharedModule} from '../../../shared/shared.module';
     MatButtonModule,
     SharedModule
   ],
-  animations: [
-    trigger('slideInRight', [
-      state('in', style({
-        left: 0,
-        opacity: 1,
-      })),
-      state('out', style({
-        left: '100px',
-        opacity: 0,
-      })),
-      transition('out => in', [
-        animate('.4s ease-out'),
-      ]),
-    ]),
-    trigger('slideInLeft', [
-      state('in', style({
-        right: 0,
-        opacity: 1,
-      })),
-      state('out', style({
-        right: '100px',
-        opacity: 0,
-      })),
-      transition('out => in', [
-        animate('.4s ease-out'),
-      ]),
-    ]),
-  ]
+  animations: [slideInLeft(100), slideInRight(100)]
 })
 export class IntroductionComponent {
   protected slideIn = 'out';

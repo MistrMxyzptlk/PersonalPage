@@ -15,6 +15,8 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "@angular-eslint/no-output-rename": [1],
+        "@angular-eslint/no-outputs-metadata-property": [1],
         "@angular-eslint/directive-selector": [
           "error",
           {

@@ -1,7 +1,8 @@
 import {AfterViewInit, Directive, ElementRef, EventEmitter, OnDestroy, Output} from '@angular/core';
 
 @Directive({
-  selector: '[appAppear]'
+  selector: '[appAppear]',
+  standalone: true,
 })
 export class OnAppearDirective implements AfterViewInit, OnDestroy {
   @Output('appAppear')

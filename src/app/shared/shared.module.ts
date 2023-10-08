@@ -10,7 +10,6 @@ import { OnAppearDirective } from './directives/on-appear.directive';
     SectionListComponent,
     SectionComponent,
     FormatPipe,
-    OnAppearDirective,
   ],
   exports: [
     SectionListComponent,
@@ -19,7 +18,8 @@ import { OnAppearDirective } from './directives/on-appear.directive';
     OnAppearDirective
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OnAppearDirective,
   ]
 })
 export class SharedModule { }

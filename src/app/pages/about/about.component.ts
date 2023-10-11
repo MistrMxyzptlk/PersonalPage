@@ -7,6 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {IntroductionComponent} from './introduction/introduction.component';
 import {FeaturesComponent} from './features/features.component';
 import {MilestonesComponent} from './milestones/milestones.component';
+import {MILESTONES} from '../../shared/const/milestones.const';
 
 @Component({
   selector: 'app-about',
@@ -26,5 +27,5 @@ import {MilestonesComponent} from './milestones/milestones.component';
 
 })
 export class AboutComponent {
-
+  protected milestones = MILESTONES;
 }

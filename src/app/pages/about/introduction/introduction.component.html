@@ -1,4 +1,4 @@
-<div class="text" [@slideInLeft]="slideIn" (appAppear)="onAppear()">
+<div class="text" [@slideIn]="animationStates[0].state" (appAppear)="onAppear()">
         <span>
           <h1> Pavel Baštinec </h1>
           <h2> Programátor a Student FIT ČVUT </h2>
@@ -21,5 +21,5 @@
 </div>
 <img src="./assets/images/avatar/1.png"
      class="avatar" alt="avatar"
-     [@slideInRight]="slideIn"
+     [@slideIn]="animationStates[1].state"
      (appAppear)="onAppear()"/>

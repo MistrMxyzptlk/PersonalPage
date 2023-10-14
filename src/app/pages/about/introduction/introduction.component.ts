@@ -2,7 +2,8 @@ import {Component} from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {SharedModule} from '../../../shared/shared.module';
-import {slideInLeft, slideInRight} from '../../../shared/animations/slide-in.animation';
+import {slideIn, SlideInAnimationsStateName} from '../../../shared/animations/slide-in.animation';
+import {IAnimationState} from '../../../shared/model/animation-state.model';
 
 @Component({
   selector: 'app-introduction',
@@ -14,11 +15,16 @@ import {slideInLeft, slideInRight} from '../../../shared/animations/slide-in.ani
     MatButtonModule,
     SharedModule
   ],
-  animations: [slideInLeft(100), slideInRight(100)]
+  animations: [
+    slideIn(100, 100)
+  ]
 })
 export class IntroductionComponent {
-  protected slideIn = 'out';
+  animationStates: IAnimationState<SlideInAnimationsStateName>[] = [
+    {state: 'left'},
+    {state: 'right'},
+  ]
   protected onAppear() {
-    this.slideIn = 'in';
+    this.animationStates = this.animationStates.map(() => ({state: 'initial'}));
   }
 }

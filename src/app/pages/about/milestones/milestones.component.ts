@@ -23,6 +23,6 @@ export class MilestonesComponent {
   @Input() public milestones: IMilestone[] = [];
 
   onAppear(component: MilestoneComponent) {
-    component.appeared = 'in';
+    component.appeared = 'initial';
   }
 }

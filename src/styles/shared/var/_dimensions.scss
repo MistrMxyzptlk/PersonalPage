@@ -1,25 +1,21 @@
 :root {
   --page-top-offset: 30px;
-  --page-width: 700px;
+  --page-width: calc(100% - 30px);
 
-  @media screen and (max-width: 700px) {
-    --page-width: 100%;
+  @media screen and (min-width: 960px) {
+    --page-width: 85%;
   }
 
-  @media screen and (min-width: 1200px) {
-    --page-width: 75%;
+  @media screen and (min-width: 1280px) {
+    --page-width: 65%;
     --page-top-offset: 40px;
   }
 
-  @media screen and (min-width: 1600px) {
-    --page-width: 70%;
+  @media screen and (min-width: 1920px) {
+    --page-width: 55%;
     --page-top-offset: 50px;
   }
 
-  @media screen and (min-width: 1800px) {
-    --page-width: 60%;
-    --page-top-offset: 60px;
-  }
 }
 
 $page-width: var(--page-width);

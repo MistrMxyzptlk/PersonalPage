@@ -1,57 +1,30 @@
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
-export const slideInTop = (offset: number) => trigger('slideInTop', [
-  state('in', style({
-    transform: 'none',
-    opacity: 1,
-  })),
-  state('out', style({
-    transform: `translateY(-${offset}px)`,
-    opacity: 0,
-  })),
-  transition('out => in', [
-    animate('.4s ease-out'),
-  ]),
-]);
-export const slideInBottom = (offset: number) => trigger('slideInBottom', [
-  state('in', style({
-    transform: 'none',
-    opacity: 1,
-  })),
-  state('out', style({
-    transform: `translateY(${offset}px)`,
-    opacity: 0,
-  })),
-  transition('out => in', [
-    animate('.4s ease-out'),
-  ]),
-]);
+export type SlideInAnimationsStateName = 'top' | 'bottom' | 'right' | 'left' | 'initial';
 
-export const slideInRight = (offset: number) => trigger('slideInRight', [
-  state('in', style({
+export const slideIn = (offsetX: number, offsetY: number) => trigger('slideIn', [
+  state('top', style({
+    transform: `translateY(-${offsetY}px)`,
+    opacity: 0,
+  })),
+  state('bottom', style({
+    transform: `translateY(${offsetY}px)`,
+    opacity: 0,
+  })),
+  state('right', style({
+    transform: `translateX(${offsetX}px)`,
+    opacity: 0,
+  })),
+  state('left', style({
+    transform: `translateX(-${offsetX}px)`,
+    opacity: 0,
+  })),
+  state('initial', style({
     transform: 'none',
     opacity: 1,
   })),
-  state('out', style({
-    transform: `translateX(${offset}px)`,
-    opacity: 0,
-  })),
-  transition('out => in', [
+  transition('* => initial', [
     animate('.4s ease-out'),
-  ]),
-]);
-
-export const slideInLeft = (offset: number) => trigger('slideInLeft', [
-  state('in', style({
-    transform: 'none',
-    opacity: 1,
-  })),
-  state('out', style({
-    transform: `translateX(-${offset}px)`,
-    opacity: 0,
-  })),
-  transition('out => in', [
-    animate('.4s ease-out'),
-  ]),
+  ])
 ]);
 

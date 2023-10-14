@@ -1,5 +1,7 @@
-<mat-grid-list cols="3" rowHeight="1:1" gutterSize="100">
-  <mat-grid-tile [@slideInLeft]="slideIn">
+<mat-grid-list [cols]="gridSettings.cols"
+               [rowHeight]="gridSettings.rowHeight"
+               [gutterSize]="gridSettings.gutterSize">
+  <mat-grid-tile [@slideIn]="animationStates[0].state">
     <div class="feature mat-elevation-z3">
       <mat-icon svgIcon="html5"></mat-icon>
       <div class="text">
@@ -10,7 +12,7 @@
       </div>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile [@zoomIn]="slideIn">
+  <mat-grid-tile [@zoomIn]="animationStates[1].state">
     <div class="feature mat-elevation-z3">
       <mat-icon class="material-100"> school_outline </mat-icon>
       <div class="text">
@@ -21,7 +23,7 @@
       </div>
     </div>
   </mat-grid-tile>
-  <mat-grid-tile [@slideInRight]="slideIn">
+  <mat-grid-tile [@slideIn]="animationStates[2].state">
     <div class="feature mat-elevation-z3">
       <mat-icon class="material-100"> group </mat-icon>
       <div class="text">

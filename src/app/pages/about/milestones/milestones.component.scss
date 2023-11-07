@@ -1,11 +1,27 @@
 @use 'vars';
 
 :host {
-  .milestones-container {
+  .milestones-container-flex {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    overflow: hidden;
+
+    &.unfolded {
+      margin-bottom: 32px;
+    }
+
+    & > * {
+      flex: 0 0 auto;
+    }
+  }
+
+  app-milestone:not(:last-of-type) {
+    margin-bottom: 32px;
+  }
+
+  .milestones-container {
     position: relative;
+    padding-bottom: 8px;
 
     &::before {
       content: "";
@@ -17,4 +33,25 @@
       background: vars.$primary-200;
     }
   }
+
+  .unfold-sub-milestones-button {
+    height: 40px;
+    margin-bottom: 32px;
+    --font-size: 16px;
+    font-size: var(--font-size);
+
+    mat-icon {
+      font-size: var(--font-size);
+      height: var(--font-size);
+      width: var(--font-size);
+    }
+  }
+
+  .main-milestone {
+    button {
+      height: 28px;
+      margin: -6px 0 12px,
+    }
+  }
 }
+

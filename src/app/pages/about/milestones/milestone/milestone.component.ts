@@ -22,7 +22,11 @@ export class MilestoneComponent {
   @Input() public icon?: string = 'done';
   @Input() public headline = 'Chybí nadpis!';
   @Input() public date?: IInterval<Date> | Date;
-  @Input() public set appeared(value: 'initial') {
+  @Input() public set appeared(value: 'initial' | 'default') {
+    if (value === 'default') {
+      this.resetAnimations();
+      return;
+    }
     this.animationStates = this.animationStates.map(() => ({state: value}));
   }
 
@@ -30,4 +34,8 @@ export class MilestoneComponent {
     {state: 'zoomOut'},
     {state: 'right'  },
   ];
+
+  protected resetAnimations() {
+    this.animationStates = [{state: 'zoomOut'}, {state: 'right'  }];
+  }
 }

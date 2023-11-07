@@ -8,6 +8,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatRippleModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {AppRoutingModule} from '../app-routing.module';
+import {TIntersectionObserver} from '../shared/tokens/intersection-observer.token';
 
 
 
@@ -28,6 +29,12 @@ import {AppRoutingModule} from '../app-routing.module';
     NgOptimizedImage,
     MatButtonModule,
     AppRoutingModule,
+  ],
+  providers: [
+    {
+      provide: TIntersectionObserver,
+      useValue: { rootElement: null },
+    }
   ]
 })
 export class LayoutModule { }

@@ -24,7 +24,7 @@ import {MILESTONES} from '../../shared/const/milestones.const';
         FeaturesComponent,
         MilestonesComponent,
     ],
-
+    providers: []
 })
 export class AboutComponent {
   protected milestones = MILESTONES;

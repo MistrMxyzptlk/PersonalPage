@@ -1,11 +1,31 @@
 <h1 class="mat-headline-2"> Milníky </h1>
-<div class="milestones-container">
-  <app-milestone *ngFor="let milestone of milestones" #c_milestone
-                 [icon]="milestone.icon ? milestone.icon : 'done'"
-                 [headline]="milestone.headline"
-                 [date]="milestone.date"
-                 [class.important]="milestone.important"
-                 (appAppear)="onAppear(c_milestone)">
-    <p *ngIf="milestone.text"> {{ milestone.text }} </p>
-  </app-milestone>
+<div class="milestones-container milestones-container-flex">
+  <ng-container *ngFor="let milestone of milestones; index as i">
+    <app-milestone class="important main-milestone" #c_milestone
+                   [icon]="milestone.icon ? milestone.icon : 'done'"
+                   [headline]="milestone.headline"
+                   [date]="milestone.date"
+                   (appAppear)="onAppear(c_milestone)"
+                   [rootMargin]="'0px'">
+      <p *ngIf="milestone.text"> {{ milestone.text }} </p>
+      <button mat-button color="primary"
+              class="unfold-button"
+              *ngIf="milestone.subMilestones.length"
+              [disabled]="unfoldedIndex === i"
+              (click)="onToggleButtonClick(i)"> Více </button>
+    </app-milestone>
+    <div [@collapse]="unfoldedIndex === i ? 'in' : 'out'"
+         class="milestones-container-flex"
+         [class.unfolded]="unfoldedIndex === i && milestone.subMilestones.length !== 0"
+         (appAppear)="onAppear(c_milestone)">
+      <app-milestone *ngFor="let submileston of milestone.subMilestones"
+                     [icon]="submileston.icon ? submileston.icon : 'done'" #c_subMilestone
+                     [headline]="submileston.headline"
+                     [date]="submileston.date"
+                     (appAppear)="onAppear(c_subMilestone)"
+                     [once]="false">
+        <p *ngIf="submileston.text"> {{ submileston.text }} </p>
+      </app-milestone>
+    </div>
+  </ng-container>
 </div>

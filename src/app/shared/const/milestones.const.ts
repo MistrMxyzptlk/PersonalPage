@@ -36,8 +36,8 @@ const highSchool: IMilestone[] = [
       from: new Date('09-1-2016')
     },
     text: `Začal jsem ve škole programovat v Javě a paralelně jsme se začal učit HTML, CSS a PHP.
-      Vedle toho taky nějaké základy hardwaru a počítačovích sítí. Součástí prográmka bylo i do jisté míry
-      konceptuální programování.`,
+      Vedle toho taky nějaké základy hardwaru a počítačovích sítí. Součástí prográmka bylo i
+      konceptuální modelování a hodně OOP.`,
   },
   {
     headline: 'Z Javy na C#',
@@ -97,7 +97,8 @@ const highSchool: IMilestone[] = [
     headline: '1. a 2. Ročníková práce',
     date: new Date(),
     text: `Ve 3. a 4. Ročníku jsem pracoval na svých prvních velkých projektech, což zahrnovalo vše od návrhu,
-      přes implementaci až po dokumentaci a následnou prezentaci před porotou`,
+      přes implementaci až po dokumentaci a následnou prezentaci před porotou. Na nich jsem se toho hodně naučil,
+      co se týče vývoje, návrhu a našel jsem svoje limity.`
   },
 ];
 const collage: IMilestone[] = [

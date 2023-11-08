@@ -5,6 +5,7 @@ import { SectionComponent } from './section/section.component';
 import { FormatPipe } from './pipe/format.pipe';
 import { OnAppearDirective } from './directives/on-appear.directive';
 import { OnDisappearDirective } from './directives/on-disappear.directive';
+import { IdDirective } from './directives/id.directive';
 
 @NgModule({
   declarations: [
@@ -12,13 +13,15 @@ import { OnDisappearDirective } from './directives/on-disappear.directive';
     SectionComponent,
     FormatPipe,
     OnDisappearDirective,
+    IdDirective,
   ],
     exports: [
         SectionListComponent,
         SectionComponent,
         FormatPipe,
         OnAppearDirective,
-        OnDisappearDirective
+        OnDisappearDirective,
+        IdDirective
     ],
   imports: [
     CommonModule,

@@ -19,6 +19,8 @@
          [class.unfolded]="unfoldedIndex === i && milestone.subMilestones.length !== 0"
          (appAppear)="onAppear(c_milestone)">
       <app-milestone *ngFor="let submileston of milestone.subMilestones"
+                     [appId]="i"
+                     [component]="c_subMilestone"
                      [icon]="submileston.icon ? submileston.icon : 'done'" #c_subMilestone
                      [headline]="submileston.headline"
                      [date]="submileston.date"

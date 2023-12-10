@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Update SSL / TSL certificate:
 sudo certbot --nginx --certonly
+
+## Used
+https://hackernoon.com/a-tutorial-to-deploy-the-nodejs-server-to-nginx-server

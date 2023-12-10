@@ -54,7 +54,7 @@ const highSchool: IMilestone[] = [
       from: new Date('09-01-2017'),
       to: new Date('06-30-2019'),
     },
-    text: `V 2. ročníku jsem se začal učit navrhování databází na abstraktní úrovni. Šlo o dialekt Postgre SQl,
+    text: `V 2. ročníku jsem se začal učit navrhování databází na abstraktní úrovni. Šlo o dialekt Postgre SQL,
        ale ovládal jsem i tehdy ještě MySQL před tím než ho koupil Oracle a vznikla Maria DB. Ve 3. ročníku
        jsme po tom navázaly Procedurálními databázemi, kde jsem pro změnu používal tehdy už Maria DB, které
        bylo a stále je velice podobné MySQL.`,
@@ -95,7 +95,7 @@ const highSchool: IMilestone[] = [
   {
     icon: 'article',
     headline: '1. a 2. Ročníková práce',
-    date: new Date(),
+    date: new Date('09-01-2019'),
     text: `Ve 3. a 4. Ročníku jsem pracoval na svých prvních velkých projektech, což zahrnovalo vše od návrhu,
       přes implementaci až po dokumentaci a následnou prezentaci před porotou. Na nich jsem se toho hodně naučil,
       co se týče vývoje, návrhu a našel jsem svoje limity.`
@@ -103,8 +103,9 @@ const highSchool: IMilestone[] = [
 ];
 const collage: IMilestone[] = [
   {
-    headline: 'lorem ipsum',
-    text: lorem_ipsum,
+    headline: 'C a C++',
+    text: `Prošel jsem si pokročilími kurzi C a C++, které mi daly hluboké znalosti o programování a algoritmizaci a naučily mně nedělat chyby.
+    `,
   },
 ];
 const work_1: IMilestone[] = [
@@ -116,20 +117,14 @@ const work_1: IMilestone[] = [
 
 export const MILESTONES: IImportantMilestone[] = [
   {
-    icon: 'baby_changing_station',
-    headline: 'Narozen 9. Dubna 2000 v Teplicích',
-    date: new Date('04-09-2000'),
-    text: null,
-    subMilestones: [],
-  },
-  {
     icon: 'draw',
     headline: 'Základní škola',
     date: {
       from: new Date('09-01-2007'),
       to: new Date('08-31-2016'),
     },
-    text: 'Nastoupil jsem na základní školu ZŽ RVMPP Buzulucká v 7 letech.',
+    text: `Nastoupil jsem na základní školu ZŽ RVMPP Buzulucká v 7 letech.
+    `,
     subMilestones: elementarySchool,
   },
   {

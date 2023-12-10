@@ -13,16 +13,7 @@ interface IBreakpointQueryValue<T> {
 })
 export class BreakpointsService {
 
-  constructor(private breakpointObserver: BreakpointObserver) {
-    console.log(this.createMediaQuery({
-      orientation: true,
-      maxHeight: 100,
-      minHeight: 0,
-      maxWidth: 100,
-      minWidth: 0,
-      value: 'text',
-    }));
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   public observe<T>(breakpoints: IBreakpointModel<T>[]) {
     const queryValues: IBreakpointQueryValue<T>[] = breakpoints.map(b => ({

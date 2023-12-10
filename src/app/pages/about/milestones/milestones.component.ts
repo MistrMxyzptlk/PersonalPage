@@ -41,7 +41,7 @@ export class MilestonesComponent {
   }
 
   onToggleButtonClick(index: number) {
-    this.subMilestones?.filter(sm => sm.appId == this.unfoldedIndex)
+    this.subMilestones?.filter(sm => sm.appId == index)
         .map(sm => sm.component)
         .forEach(sm => {
           if (sm) {

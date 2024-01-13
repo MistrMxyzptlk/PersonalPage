@@ -15,8 +15,12 @@
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
-        "@angular-eslint/no-output-rename": [1],
-        "@angular-eslint/no-outputs-metadata-property": [1],
+        "@angular-eslint/no-output-rename": [
+          1
+        ],
+        "@angular-eslint/no-outputs-metadata-property": [
+          1
+        ],
         "@angular-eslint/directive-selector": [
           "error",
           {
@@ -33,7 +37,13 @@
             "style": "kebab-case"
           }
         ],
-        "quotes": [2, "single", { "avoidEscape": true }]
+        "quotes": [
+          2,
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ]
       }
     },
     {
@@ -43,8 +53,7 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {
-      }
+      "rules": {}
     }
   ]
 }

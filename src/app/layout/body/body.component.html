@@ -1,9 +1,9 @@
-<div class="sidebar left-sidebar" *ngIf="sidebarState.left.open">
-
-</div>
+@if(sidebarState.left.open) {
+  <div class="sidebar left-sidebar"></div>
+}
 <div class="main">
   <router-outlet></router-outlet>
 </div>
-<div class="sidebar right-sidebar" *ngIf="sidebarState.right.open">
-
-</div>
+@if(sidebarState.right.open) {
+  <div class="sidebar right-sidebar"></div>
+}

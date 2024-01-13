@@ -1,10 +1,14 @@
 <div class="icon mat-elevation-z3" [@zoomIn]="animationStates[0].state">
-  <mat-icon *ngIf="icon" inline> {{ icon }} </mat-icon>
+  @if(icon) {
+    <mat-icon inline> {{ icon }} </mat-icon>
+  }
 </div>
 <div class="text mat-elevation-z2" [@slideIn]="animationStates[1].state">
   <div class="header">
     <h1> {{ headline }} </h1>
-    <h2 *ngIf="date"> {{ date | format }} </h2>
+    @if(date) {
+      <h2> {{ date | format }} </h2>
+    }
   </div>
   <ng-content></ng-content>
 </div>

@@ -19,7 +19,8 @@ import {IAnimationState} from '../../../../shared/model/animation-state.model';
   ]
 })
 export class MilestoneComponent {
-  @Input() public icon?: string = 'done';
+  @Input() public icon?: string;
+  @Input() public svgIcon?: string;
   @Input() public headline = 'Chybí nadpis!';
   @Input() public date?: IInterval<Date> | Date;
   @Input() public set appeared(value: 'initial' | 'default') {

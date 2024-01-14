@@ -2,7 +2,8 @@
 <div class="milestones-container milestones-container-flex">
   @for(milestone of milestones; track milestone; let i = $index) {
     <app-milestone class="important main-milestone" #c_milestone
-                   [icon]="milestone.icon ? milestone.icon : 'done'"
+                   [icon]="milestone.icon"
+                   [svgIcon]="milestone.svgIcon"
                    [headline]="milestone.headline"
                    [date]="milestone.date"
                    (appAppear)="onAppear(c_milestone)"
@@ -27,7 +28,8 @@
       @for(subMilestone of milestone.subMilestones; track subMilestone) {
         <app-milestone [appId]="i"
                        [component]="c_subMilestone"
-                       [icon]="subMilestone.icon ? subMilestone.icon : 'done'" #c_subMilestone
+                       [icon]="subMilestone.icon" #c_subMilestone
+                       [svgIcon]="subMilestone.svgIcon"
                        [headline]="subMilestone.headline"
                        [date]="subMilestone.date"
                        (appAppear)="onAppear(c_subMilestone)"

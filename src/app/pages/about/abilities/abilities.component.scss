@@ -1,0 +1,9 @@
+.abilities-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+
+  app-ability:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

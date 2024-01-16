@@ -1,0 +1,32 @@
+:host {
+  display: flex;
+  gap: 5rem;
+}
+
+:host:nth-child(even) {
+  .text-container {
+    align-items: flex-end;
+  }
+}
+
+.icon-container {
+  $size: 15rem;
+  width: $size;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    font-size: $size;
+    width: $size;
+    height: $size;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+}

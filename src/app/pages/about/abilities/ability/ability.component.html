@@ -1,0 +1,11 @@
+<div class="icon-container">
+  @if (ability.icon) {
+    <mat-icon color="primary" [fontIcon]="ability.icon"/>
+  } @else if (ability.iconSvg) {
+    <mat-icon [svgIcon]="ability.iconSvg" color="primary"/>
+  }
+</div>
+<div class="text-container">
+  <h1 class="mat-h1"> {{ ability.title }} </h1>
+  <p class="mat-body-1"> {{ ability.text }} </p>
+</div>

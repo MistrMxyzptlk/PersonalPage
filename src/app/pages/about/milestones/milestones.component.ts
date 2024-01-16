@@ -10,6 +10,7 @@ import {IdDirective} from '../../../shared/directives/id.directive';
 
 export interface IMilestone {
   icon?: string;
+  svgIcon?: string;
   headline: string;
   date?: IInterval<Date> | Date;
   text: string | null;

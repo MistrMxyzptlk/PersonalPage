@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     for (const icon of ICONS) {
-      this.registry.addSvgIcon(icon.name, this.sanitizer.bypassSecurityTrustResourceUrl(icon.url));
+      this.registry.addSvgIcon(icon.name, this.sanitizer.bypassSecurityTrustResourceUrl(`assets/images/${icon.url}`));
     }
     this.registry.setDefaultFontSetClass('material-symbols-outlined')
   }

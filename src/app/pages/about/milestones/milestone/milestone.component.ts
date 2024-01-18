@@ -14,7 +14,7 @@ import {IAnimationState} from '../../../../shared/model/animation-state.model';
   templateUrl: './milestone.component.html',
   styleUrls: ['./milestone.component.scss'],
   animations: [
-    slideIn(256, 100),
+    slideIn(150, 100),
     zoomIn(0.5)
   ]
 })

@@ -1,6 +1,7 @@
 <h2 class="mat-headline-2"> Mé schopnosti </h2>
 <div class="abilities-container">
     @for (ability of abilities; track ability) {
-        <app-ability [ability]="ability"/>
+        <app-ability [ability]="ability" #c_ability
+                     (appAppear)="abilityAppeared(c_ability)"/>
     }
 </div>

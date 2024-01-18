@@ -1,11 +1,11 @@
-<div class="icon-container">
+<div class="icon-container" [@slideIn]="animationState ? 'initial' : 'bottom'">
   @if (ability.icon) {
     <mat-icon color="primary" [fontIcon]="ability.icon"/>
   } @else if (ability.iconSvg) {
     <mat-icon [svgIcon]="ability.iconSvg" color="primary"/>
   }
 </div>
-<div class="text-container">
+<div class="text-container" [@slideIn]="animationState ? 'initial' : 'bottom'">
   <h1 class="mat-h1"> {{ ability.title }} </h1>
   <p class="mat-body-1"> {{ ability.text }} </p>
 </div>

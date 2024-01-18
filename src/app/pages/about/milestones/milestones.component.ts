@@ -53,4 +53,8 @@ export class MilestonesComponent {
     this.unfoldedIndex = index;
   }
 
+  scrollIntoView(c_milestone: MilestoneComponent, event: {toState: string}) {
+    if (event.toState !== 'in') return;
+    c_milestone.scrollIntoView();
+  }
 }

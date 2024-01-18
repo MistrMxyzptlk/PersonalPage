@@ -5,6 +5,11 @@
   position: relative;
   min-height: 72px;
 
+  .scroll-target {
+    position: absolute;
+    top: -2rem;
+  }
+
   --bubble-border-color: #{vars.$primary-300};
   --bubble-icon-color: #{vars.$primary-400};
   --bubble-background-color: white;

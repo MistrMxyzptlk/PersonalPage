@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 printf "building packages: \n"
 ng build

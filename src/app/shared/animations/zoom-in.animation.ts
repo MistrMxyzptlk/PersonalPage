@@ -12,7 +12,7 @@ export const zoomIn = (initScale: number) => trigger('zoomIn', [
     opacity: 1,
   })),
   transition('zoomOut => initial', [
-    animate('.4s ease-out'),
+    animate('.6s ease-out'),
   ])
 ]);
 

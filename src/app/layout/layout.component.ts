@@ -7,13 +7,13 @@ import {IIntersectionObserver, TIntersectionObserver} from '../shared/tokens/int
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements AfterViewInit {
-  @ViewChild('bodyComponent', {read: ElementRef}) bodyComponent?: ElementRef;
+  @ViewChild('scrollContainer', {read: ElementRef}) scrollContainer!: ElementRef;
 
   constructor(@Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver) {
   }
 
   ngAfterViewInit(): void {
-    this.intersectionObserver.rootElement = this.bodyComponent?.nativeElement;
+    this.intersectionObserver.rootElement = this.scrollContainer.nativeElement;
   }
 
 }

@@ -1,0 +1,29 @@
+<h2 class="mat-headline-2"> Mé schopnosti </h2>
+<div class="abilities-container"
+     [class.expanded]="abilitiesExpandDone"
+     [@expand]="abilitiesExpanded ? 'expanded' : 'initial'"
+     (@expand.start)="onExpansionStart($event)"
+     (@expand.done)="onExpansionDone($event)">
+    @for (ability of abilities; track ability) {
+        <app-ability [ability]="ability" #c_ability
+                     (appAppear)="abilityAppeared(c_ability)"/>
+    }
+</div>
+<button class="expand-button"
+        mat-fab extended=""
+        (click)="toggleAbilities()"
+        [disabled]="abilitiesAnimating"
+        color="primary">
+  @if (abilitiesExpanded) {
+    Méně
+  } @else {
+    Více
+  }
+  <mat-icon iconPositionEnd>
+    @if (abilitiesExpanded) {
+      expand_less
+    } @else {
+      expand_more
+    }
+  </mat-icon>
+</button>

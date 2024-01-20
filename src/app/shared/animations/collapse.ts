@@ -1,6 +1,6 @@
 import {animate, AUTO_STYLE, state, style, transition, trigger} from '@angular/animations';
 
-const DEFAULT_DURATION = 400;
+const DEFAULT_DURATION = 600;
 export const Collapse = trigger('collapse', [
   state('in', style({
     height: AUTO_STYLE,

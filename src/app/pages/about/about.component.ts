@@ -8,24 +8,28 @@ import {IntroductionComponent} from './introduction/introduction.component';
 import {FeaturesComponent} from './features/features.component';
 import {MilestonesComponent} from './milestones/milestones.component';
 import {MILESTONES} from '../../shared/const/milestones.const';
+import {AbilitiesComponent} from './abilities/abilities.component';
+import {ABILITIES} from '../../shared/const/abilities.const';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
   standalone: true,
-    imports: [
-        SharedModule,
-        MatGridListModule,
-        MatCardModule,
-        MatIconModule,
-        MatButtonModule,
-        IntroductionComponent,
-        FeaturesComponent,
-        MilestonesComponent,
-    ],
+  imports: [
+    SharedModule,
+    MatGridListModule,
+    MatCardModule,
+    MatIconModule,
+    MatButtonModule,
+    IntroductionComponent,
+    FeaturesComponent,
+    MilestonesComponent,
+    AbilitiesComponent,
+  ],
     providers: []
 })
 export class AboutComponent {
   protected milestones = MILESTONES;
+  protected abilities = ABILITIES;
 }

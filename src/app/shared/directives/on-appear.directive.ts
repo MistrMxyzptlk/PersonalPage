@@ -28,7 +28,7 @@ export class OnAppearDirective implements AfterViewInit, OnDestroy {
   constructor(
       private elementRef: ElementRef<HTMLElement>,
       @Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver
-  ) { }
+  ) {}
 
   ngAfterViewInit(): void {
     const options = {

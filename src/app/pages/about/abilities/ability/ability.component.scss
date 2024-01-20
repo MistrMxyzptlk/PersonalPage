@@ -1,0 +1,40 @@
+$icon_size: 15rem;
+$icon_gap: 5rem;
+
+:host {
+  display: flex;
+  gap: $icon_gap;
+}
+
+:host {
+  &:nth-child(even) .text-container {
+    direction: rtl;
+    padding-left: $icon_size + $icon_gap;
+  }
+
+  &:nth-child(odd) .text-container {
+    padding-right: $icon_size + $icon_gap;
+  }
+}
+
+.icon-container {
+  width: $icon_size;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  mat-icon {
+    font-size: $icon_size;
+    width: $icon_size;
+    height: $icon_size;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  text-align: justify;
+}

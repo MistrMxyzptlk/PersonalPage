@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, ElementRef, Input, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatIconModule} from '@angular/material/icon';
 import {IInterval} from '../../../../shared/model/interval.model';
@@ -14,7 +14,7 @@ import {IAnimationState} from '../../../../shared/model/animation-state.model';
   templateUrl: './milestone.component.html',
   styleUrls: ['./milestone.component.scss'],
   animations: [
-    slideIn(256, 100),
+    slideIn(150, 100),
     zoomIn(0.5)
   ]
 })
@@ -31,6 +31,14 @@ export class MilestoneComponent {
     this.animationStates = this.animationStates.map(() => ({state: value}));
   }
 
+  @ViewChild('scrollTarget', {static: false})
+  private scrollTarget!: ElementRef;
+
+  constructor(
+    private elementRef: ElementRef
+  ) {
+  }
+
   protected animationStates: IAnimationState<SlideInAnimationsStateName | ZoomInAnimationStateName>[] = [
     {state: 'zoomOut'},
     {state: 'right'  },
@@ -38,5 +46,9 @@ export class MilestoneComponent {
 
   protected resetAnimations() {
     this.animationStates = [{state: 'zoomOut'}, {state: 'right'  }];
+  }
+
+  public scrollIntoView() {
+    this.scrollTarget.nativeElement.scrollIntoView({behavior: 'smooth'});
   }
 }

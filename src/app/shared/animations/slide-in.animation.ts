@@ -24,7 +24,7 @@ export const slideIn = (offsetX: number, offsetY: number) => trigger('slideIn', 
     opacity: 1,
   })),
   transition('* => initial', [
-    animate('.4s ease-out'),
+    animate('.6s ease-out'),
   ])
 ]);
 

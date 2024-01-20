@@ -9,6 +9,7 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatButtonModule} from '@angular/material/button';
 import {AppRoutingModule} from '../app-routing.module';
 import {TIntersectionObserver} from '../shared/tokens/intersection-observer.token';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -29,6 +30,7 @@ import {TIntersectionObserver} from '../shared/tokens/intersection-observer.toke
     NgOptimizedImage,
     MatButtonModule,
     AppRoutingModule,
+    MatIconModule,
   ],
   providers: [
     {

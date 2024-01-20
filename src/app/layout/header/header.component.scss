@@ -2,11 +2,13 @@
 
 mat-toolbar {
   display: flex;
+  padding-right: 1rem;
   align-items: center;
 }
 
 mat-toolbar-row {
   display: flex;
+  padding: 0;
   width: vars.$page-width;
 }
 
@@ -19,13 +21,17 @@ mat-toolbar-row {
 }
 
 .main {
+  .link:first-of-type {
+    margin-left: 1rem;
+  }
 }
 
 .socials {
   .link {
+    color: white;
     padding: 0.6rem;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     overflow: hidden;
   }
 }
@@ -35,7 +41,7 @@ mat-toolbar-row {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4rem;
   padding: 0 1.2rem;
 

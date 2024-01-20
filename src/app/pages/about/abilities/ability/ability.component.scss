@@ -8,7 +8,7 @@ $icon_gap: 5rem;
 
 :host {
   &:nth-child(even) .text-container {
-    align-items: flex-end;
+    direction: rtl;
     padding-left: $icon_size + $icon_gap;
   }
 

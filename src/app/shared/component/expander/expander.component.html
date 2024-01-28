@@ -1,0 +1,25 @@
+<div class="content"
+     [class.expanded]="expanded"
+     [@expand]="expanderState ? 'expanded' : 'initial'"
+     (@expand.start)="onExpansionStart($event)"
+     (@expand.done)="onExpansionDone($event)">
+  <ng-content/>
+</div>
+<button class="expand-button"
+        mat-fab extended=""
+        (click)="toggle()"
+        [disabled]="expanding"
+        color="primary">
+  @if (expanded) {
+    Méně
+  } @else {
+    Více
+  }
+  <mat-icon iconPositionEnd>
+    @if (expanded) {
+      expand_less
+    } @else {
+      expand_more
+    }
+  </mat-icon>
+</button>

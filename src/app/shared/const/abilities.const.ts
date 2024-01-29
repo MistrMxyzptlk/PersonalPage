@@ -22,6 +22,12 @@ export const ABILITIES: IAbility[] = [
     Blazor a Xamarin (předchůdce .NET MAUI)`
   },
   {
+    iconSvg: 'cpp',
+    title: 'C/C++',
+    text: `C a C++ jsou imperitivní jazyky. C/C++ se kompilují do strojového kódu, který je spustitelný přímo na
+    procesoru a `
+  },
+  {
     iconSvg: 'firebase',
     title: 'Firebase',
     text: `Firebase je cloudová služba od Aphabet Inc. (Google). Nabízí vše od hostování webu až po vlastní cloudové

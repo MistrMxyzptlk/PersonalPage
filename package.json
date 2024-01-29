@@ -23,6 +23,9 @@
     "@angular/platform-browser-dynamic": "^17.0.9",
     "@angular/router": "^17.0.9",
     "@ngneat/until-destroy": "^10.0.0",
+    "marked": "^9.0.0",
+    "ngx-markdown": "^17.1.1",
+    "prismjs": "^1.28.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"

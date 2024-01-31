@@ -9,7 +9,9 @@ import {IIntersectionObserver, TIntersectionObserver} from '../shared/tokens/int
 export class LayoutComponent implements AfterViewInit {
   @ViewChild('scrollContainer', {read: ElementRef}) scrollContainer!: ElementRef;
 
-  constructor(@Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver) {
+  constructor(
+    @Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver,
+  ) {
   }
 
   ngAfterViewInit(): void {

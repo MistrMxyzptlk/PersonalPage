@@ -21,8 +21,8 @@ export class ScrollerService implements ViewportScroller {
   getScrollPosition(): [number, number] {
     if(!this.intersectionObserver.rootElement) return [0, 0];
     return [
-      this.intersectionObserver.rootElement.offsetTop,
-      this.intersectionObserver.rootElement.offsetLeft
+      this.intersectionObserver.rootElement.scrollLeft,
+      this.intersectionObserver.rootElement.scrollTop,
     ];
   }
 
@@ -31,15 +31,17 @@ export class ScrollerService implements ViewportScroller {
   }
 
   scrollToAnchor(anchor: string): void {
-    const a = this.intersectionObserver.rootElement?.querySelector(`#${anchor}`);
+    const a = this.intersectionObserver.rootElement?.querySelector(`#${anchor}`)?.getBoundingClientRect();
     if (!a) {
       return;
     }
-    a.scrollIntoView();
-    //this.intersectionObserver.rootElement?.scrollTo()
+    const left = a.left - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.left || 0);
+    const top = a.top - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.top || 0);
+    this.intersectionObserver.rootElement?.scrollTo(left, top);
   }
 
   setHistoryScrollRestoration(scrollRestoration: 'auto' | 'manual'): void {
+    // console.log(scrollRestoration);
     this.scrollRestoration = scrollRestoration;
   }
 }

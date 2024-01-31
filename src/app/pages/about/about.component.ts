@@ -10,6 +10,7 @@ import {MilestonesComponent} from './milestones/milestones.component';
 import {MILESTONES} from '../../shared/const/milestones.const';
 import {AbilitiesComponent} from './abilities/abilities.component';
 import {ABILITIES} from '../../shared/const/abilities.const';
+import {ContactComponent} from './contact/contact.component';
 
 @Component({
   selector: 'app-about',
@@ -26,6 +27,7 @@ import {ABILITIES} from '../../shared/const/abilities.const';
     FeaturesComponent,
     MilestonesComponent,
     AbilitiesComponent,
+    ContactComponent,
   ],
     providers: []
 })

@@ -1,0 +1,40 @@
+<div class="contact-container" (appAppear)="onAppear()">
+  <div class="column" [@slideIn]="appeared ? 'initial' : 'left'">
+    <h2 class="mat-headline-2"> Kontakt </h2>
+    <div class="contact">
+      <mat-icon color="primary"> mail </mat-icon>
+      <h2 class="mat-h2"> Email: </h2>
+      <a href="mailto:bastinec.pavel@gmail.com" class="mat-body-1">
+        bastinec.pavel&#64;gmail.com
+        <mat-icon color="primary"> open_in_new </mat-icon>
+      </a>
+    </div>
+    <div class="contact">
+      <mat-icon color="primary"> call </mat-icon>
+      <h2 class="mat-h2"> Telefon: </h2>
+      <a href="tel:+420724648655" class="mat-body-1">
+        +420 724 648 655
+        <mat-icon color="primary"> open_in_new </mat-icon>
+      </a>
+    </div>
+    <div class="contact">
+      <mat-icon svgIcon="linkedin-outlined" color="primary"></mat-icon>
+      <h2 class="mat-h2"> Linked In: </h2>
+      <a href="https://www.linkedin.com/in/pavel-ba%C5%A1tinec-1720b022a/" target="_blank" class="mat-body-1">
+        Pavel Baštinec
+        <mat-icon color="primary"> open_in_new </mat-icon>
+      </a>
+    </div>
+    <div class="contact">
+      <mat-icon svgIcon="discord" color="primary"></mat-icon>
+      <h2 class="mat-h2"> Discord: </h2>
+      <a href="http://discordapp.com/users/323181227148574720" target="_blank" class="mat-body-1">
+        mixy4628
+        <mat-icon color="primary"> open_in_new </mat-icon>
+      </a>
+    </div>
+  </div>
+  <div class="column" [@slideIn]="appeared ? 'initial' : 'right'">
+    <google-map [options]="options"/>
+  </div>
+</div>

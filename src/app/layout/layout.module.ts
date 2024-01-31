@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {CommonModule, NgOptimizedImage, ViewportScroller} from '@angular/common';
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -10,6 +10,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {AppRoutingModule} from '../app-routing.module';
 import {TIntersectionObserver} from '../shared/tokens/intersection-observer.token';
 import {MatIconModule} from '@angular/material/icon';
+import {ScrollerService} from './scroller-service/scroller-service.service';
 
 
 
@@ -36,6 +37,10 @@ import {MatIconModule} from '@angular/material/icon';
     {
       provide: TIntersectionObserver,
       useValue: { rootElement: null },
+    },
+    {
+      provide: ViewportScroller,
+      useClass: ScrollerService
     }
   ]
 })

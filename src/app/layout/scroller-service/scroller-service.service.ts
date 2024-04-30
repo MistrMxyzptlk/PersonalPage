@@ -2,9 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {ViewportScroller} from '@angular/common';
 import {IIntersectionObserver, TIntersectionObserver} from '../../shared/tokens/intersection-observer.token';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ScrollerService implements ViewportScroller {
   private offset: [number, number] | (() => [number, number]) = [0, 0];
   private scrollRestoration: 'auto' | 'manual' = 'auto';
@@ -30,14 +28,17 @@ export class ScrollerService implements ViewportScroller {
     this.intersectionObserver.rootElement?.scrollTo(...position);
   }
 
-  scrollToAnchor(anchor: string): void {
+  scrollToAnchor(anchor: string, smooth: boolean = false): void {
     const a = this.intersectionObserver.rootElement?.querySelector(`#${anchor}`)?.getBoundingClientRect();
     if (!a) {
       return;
     }
-    const left = a.left - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.left || 0);
-    const top = a.top - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.top || 0);
-    this.intersectionObserver.rootElement?.scrollTo(left, top);
+    const offset = (typeof this.offset === 'function') ? this.offset() : this.offset;
+    const left = a.left - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.left || 0) + offset[0];
+    const top = a.top - (this.intersectionObserver.rootElement?.getBoundingClientRect()?.top || 0) + offset[1];
+    this.intersectionObserver.rootElement?.scrollTo({
+      top, left, behavior: smooth ? 'smooth' : 'instant',
+    });
   }
 
   setHistoryScrollRestoration(scrollRestoration: 'auto' | 'manual'): void {

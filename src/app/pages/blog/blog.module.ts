@@ -8,9 +8,6 @@ const routes: Routes = [
     path: '',
     component: BlogComponent,
   }, {
-    path: 'list',
-    loadComponent: () => import('./blogs/blogs.component').then(c => c.BlogsComponent),
-  }, {
     path: 'read/:id',
     loadComponent: () => import('./read/read.component').then(c => c.ReadComponent),
   }

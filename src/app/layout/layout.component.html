@@ -1,5 +1,5 @@
 <app-header class="prevent-select prevent-drag"></app-header>
-<div class="scroll-container" #scrollContainer>
+<div class="scroll-container" #scrollContainer (scrollend)="scrollEnd($event)">
   <app-body></app-body>
   <app-footer class="prevent-select prevent-drag"></app-footer>
 </div>

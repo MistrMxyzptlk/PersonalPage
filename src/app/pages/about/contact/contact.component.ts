@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
 import {GoogleMapsModule} from '@angular/google-maps';
-import {OnAppearDirective} from '../../../shared/directives/on-appear.directive';
-import {slideIn} from '../../../shared/animations/slide-in.animation';
-import {zoomIn} from '../../../shared/animations/zoom-in.animation';
+import {OnAppearDirective} from 'src/app/shared/directives/on-appear.directive';
+import {slideIn} from 'src/app/shared/animations/slide-in.animation';
+import {zoomIn} from 'src/app/shared/animations/zoom-in.animation';
 
 @Component({
   selector: 'app-contact',

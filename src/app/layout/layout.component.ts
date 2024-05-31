@@ -1,5 +1,7 @@
 import {AfterViewInit, Component, ElementRef, Inject, ViewChild} from '@angular/core';
 import {IIntersectionObserver, TIntersectionObserver} from '../shared/tokens/intersection-observer.token';
+import {ViewportScroller} from '@angular/common';
+import {ScrollerService} from 'src/app/layout/scroller-service/scroller-service.service';
 
 @Component({
   selector: 'app-layout',
@@ -11,6 +13,7 @@ export class LayoutComponent implements AfterViewInit {
 
   constructor(
     @Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver,
+    @Inject(ViewportScroller) private scrollerService: ScrollerService
   ) {
   }
 
@@ -18,4 +21,7 @@ export class LayoutComponent implements AfterViewInit {
     this.intersectionObserver.rootElement = this.scrollContainer.nativeElement;
   }
 
+  scrollEnd(e: Event) {
+    this.scrollerService.scrollEndEvent$.next(e);
+  }
 }

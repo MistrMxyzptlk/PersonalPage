@@ -23,6 +23,16 @@
     position: relative;
     padding-bottom: 8px;
 
+    .scroll-target-bottom {
+      position: absolute;
+      bottom: -2rem;
+    }
+
+    .scroll-target-top {
+      position: absolute;
+      top: -2rem;
+    }
+
     &::before {
       content: "";
       position: absolute;

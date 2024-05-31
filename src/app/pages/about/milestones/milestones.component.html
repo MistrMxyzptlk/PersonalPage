@@ -19,10 +19,11 @@
           Více
         </button>
       }
-
+      <div class="scroll-target-top" #scrollTargetTop [attr.data-id]="i"></div>
+      <div class="scroll-target-bottom" #scrollTargetBottom [attr.data-id]="i"></div>
     </app-milestone>
     <div [@collapse]="unfoldedIndex === i ? 'in' : 'out'"
-         (@collapse.done)="scrollIntoView(c_milestone, $event)"
+         (@collapse.start)="scrollIntoView(i, $event)"
          class="milestones-container-flex"
          [class.unfolded]="unfoldedIndex === i && milestone.subMilestones.length !== 0"
          (appAppear)="onAppear(c_milestone)">

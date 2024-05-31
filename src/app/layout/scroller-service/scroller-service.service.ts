@@ -1,11 +1,13 @@
 import {Inject, Injectable} from '@angular/core';
 import {ViewportScroller} from '@angular/common';
 import {IIntersectionObserver, TIntersectionObserver} from '../../shared/tokens/intersection-observer.token';
+import {Subject} from 'rxjs';
 
 @Injectable()
 export class ScrollerService implements ViewportScroller {
   private offset: [number, number] | (() => [number, number]) = [0, 0];
   private scrollRestoration: 'auto' | 'manual' = 'auto';
+  scrollEndEvent$ = new Subject<Event | null>();
 
   constructor(
     @Inject(TIntersectionObserver) private intersectionObserver: IIntersectionObserver
